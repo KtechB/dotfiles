@@ -1,0 +1,20 @@
+// Place your key bindings in this file to override the defaults
+[
+        // Panel と Editor 間の移動
+{
+	"key": "ctrl+k",
+	"command": "workbench.action.terminal.toggleTerminal",
+	"when": "editorTextFocus"
+},
+{
+	"key": "ctrl+k",
+	"command": "workbench.action.focusActiveEditorGroup",
+	"when": "terminalFocus"
+}
+ {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+
+]

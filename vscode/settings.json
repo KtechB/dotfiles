@@ -1,0 +1,213 @@
+{
+  "terminal.integrated.letterSpacing": 1,
+  "terminal.integrated.fontFamily": "Consolas,Meiryo, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 14,
+  //general
+  "window.restoreWindows": "none",
+  // editor graphic
+  "editor.fontFamily": "‘Cascadia Code’,  Consolas, `Source Han Code JP N`, `Courier New`, monospace",
+  "editor.roundedSelection": true, // 選択範囲の角を丸める
+  "editor.minimap.enabled": false,
+  //markdown
+  "[markdown]": {
+    "editor.fontFamily": "Cambria, ヒラギノ明朝",
+    "editor.letterSpacing": 0.0, // 文字の間隔を広げる
+    "editor.lineHeight": 24,
+    "editor.fontSize": 14,
+  },
+  "git.autofetch": true,
+  // for vim 
+  // システムのclipboardにコピー
+  "vim.useSystemClipboard": true,
+  // 検索に:を入れる
+  "vim.cmdLineInitialColon": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  // カーソル上にあるワードを"*"で検索
+  "vim.visualstar": true,
+  // 諸々のctrlキーを使った操作が有効になる
+  "vim.useCtrlKeys": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  // for change : to ;
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
+    },
+    {
+      "before": [
+        ":"
+      ],
+      "after": [
+        ";"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    }
+  ],
+  // set space ac leader
+  "vim.leader": "<space>",
+  // fix undo redo as vscode
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "u"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-r>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "editorWarning.foreground": "#f5d33c",
+    "editorInfo.foreground": "#5ace77",
+    "statusBar.background": "#8b0808",
+    "statusBar.noFolderBackground": "#8b0808",
+    "statusBar.debuggingBackground": "#8b0808"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsicons.dontShowNewVersionMessage": true,
+  "remote.SSH.remotePlatform": {
+    "HydroZ370": "linux",
+    "Pro5000mk2": "linux"
+  },
+  //vimacs encouraged setting
+  //"vim.useCtrlKeys": false,
+  "vim.overrideCopy": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-d>": true,
+    "<C-e>": false,
+    "<C-f>": true,
+    "<C-b>": true,
+    "<C-u>": true,
+    "<C-r>": true,
+    "<C-v>": false, // 矩形visual
+    "<C-[>": true,
+    "<C-w>": true, // windowcommand
+  },
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.replace": "block-outline",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": "#8b0808",
+  "vim.statusBarColors.insert": "#ef7f7f",
+  "vim.statusBarColors.visual": "#89ccdd",
+  "vim.statusBarColors.visualline": "#b2864a",
+  "vim.statusBarColors.visualblock": "#b2844a",
+  "vim.statusBarColors.replace": "#a5382c",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "relative",
+  "update.mode": "manual",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "pasteImage.namePrefix": "${currentFileNameWithoutExt}_", // デフォルトのファイル名の頭にmarkdown名をつける
+  "pasteImage.path": "${currentFileDir}/img", //(markdownファイルのディレクトリ内)/img内に画像を保存
+  "pasteImage.showFilePathConfirmInputBox": true, // ペースト時にファイル名を変更する
+  "pasteImage.filePathConfirmInputBoxMode": "onlyName",
+  "pasteImage.prefix": "./",
+  "editor.fontSize": 15,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.showStartPage": false,
+  "python.analysis.typeCheckingMode": "basic",
+  "java.home": "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "python.formatting.provider": "black",
+  "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Visual Studio 2019 Dark",
+  "editor.tabSize": 8,
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  // unity
+  "omnisharp.useGlobalMono": "always",
+  "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current/Commands",
+  "redhat.telemetry.enabled": false,
+  "workbench.iconTheme": "vscode-icons",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // for solidity with hardhat
+// "solidity.compileUsingRemoteVersion" : "latest",
+// "solidity.defaultCompiler": "localNodeModule",
+"solidity.compileUsingRemoteVersion": "latest",
+"solidity.packageDefaultDependenciesContractsDirectory": "",
+"solidity.packageDefaultDependenciesDirectory": "node_modules",
+"[solidity]": {
+  "editor.defaultFormatter": "JuanBlanco.solidity"
+},
+"editor.bracketPairColorization.enabled": true,
+"editor.formatOnSave": true,
+"[rust]": {
+  "editor.defaultFormatter": "matklad.rust-analyzer"
+},
+"terminal.integrated.gpuAcceleration": "off"
+  //
+}
