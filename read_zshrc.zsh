@@ -1,4 +1,4 @@
-ZSH_DIR="${HOME}/.zsh"
+ZSH_DIR="${HOME}/dotfiles/.zsh"
 
 # read .zshrc
 if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
