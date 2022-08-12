@@ -1,15 +1,15 @@
-#brew install neovim --HEAD
+cd `dirname $0`
+brew install neovim --HEAD
 
-# install packer.nvim
-#git clone https://github.com/wbthomason/packer.nvim \
-#  ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
+# install packer.nvim https://github.com/wbthomason/packer.nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # dotfile
 mkdir -p $HOME/.config/nvim
 
-ln -sf $(pwd)/neovim/.config/nvim/init.lua $HOME/.config/nvim/init.lua
+ln -sf ./neovim/.config/nvim/ $HOME/.config/nvim
 # lua
-ln -sf $(pwd)/neovim/.config/nvim/lua $HOME/.config/nvim/lua
 
 
 
