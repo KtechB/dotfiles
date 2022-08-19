@@ -23,67 +23,7 @@ alias gpo='git push origin HEAD'
 alias gc-m='git commit -m'
 alias tree='tree -a -I "\.DS_Store|\.git|node_modules|vendor\/bundle" -N'
 
-# ================== path =========
-path=(
-	/opt/homebrew/bin(N-/)
-	/usr/local/bin(N-/)
-	$path
-)
-if (( $+commands[sw_vers] )) && (( $+commands[arch] )); then
-	[[ -x /usr/local/bin/brew ]] && alias brew="arch -arch x86_64 /usr/local/bin/brew"
-	alias x64='exec arch -x86_64 /bin/zsh'
-	alias a64='exec arch -arm64e /bin/zsh'
-	switch-arch() {
-		if  [[ "$(uname -m)" == arm64 ]]; then
-			arch=x86_64
-		elif [[ "$(uname -m)" == x86_64 ]]; then
-			arch=arm64e
-		fi
-		exec arch -arch $arch /bin/zsh
-	}
-fi
-setopt magic_equal_subst
-
-export PATH=/Users/buchi_mac/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH=$HOME/.anyenv/bin:$PATH
-export PATH=$HOME/nodenv/bin:$PATH
-export PATH=/Users/buchi_mac/.nodenv/versions/14.16.0/lib/node_modules/@aws-amplify/cli/bin:$PATH
-eval "$(nodenv init -)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/buchi_mac/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/buchi_mac/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/buchi_mac/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/buchi_mac/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-#
-conda activate
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/buchi_mac/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/buchi_mac/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/buchi_mac/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/buchi_mac/google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH="$PATH:/Library/Frameworks/Mono.framework/Commands"
-# system-wide environment settings for zsh(1)
-if [ -x /usr/libexec/path_helper ]; then
-    eval `/usr/libexec/path_helper -s`
-fi
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/buchi_mac/google-keys/kaggleml-299700-78959865d152.json"
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$PATH:$(go env GOPATH)/bin"
-
-# >>> CLI tools >>>
+ >>> CLI tools >>>
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
