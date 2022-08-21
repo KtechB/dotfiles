@@ -1,7 +1,7 @@
 alias checkaliasload="echo ok"
 alias startyabai="brew services start skhd;brew services start yabai"
 alias stopyabai="brew services stop skhd;brew services stop yabai"
-alias s_work="open -n /Applications/Google\ Chrome.app &&code&&open /Applications/Notion.app"
+alias s_work="open -n /Applications/Google\ Chrome.app ;sleep 1;code;sleep 1;open /Applications/Notion.app"
 
 alias vi='nvim'
 
