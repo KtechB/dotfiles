@@ -12,20 +12,11 @@ zstyle ':vcs_info:*' formats "%F{yellow}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd(){ vcs_info }
 
-RPROMPT='${vcs_info_msg_0_}'"$p_color"
-
-PROMPT='
-%*
-%F{yellow}[%~]%f
-%# '
-
 alias gpo='git push origin HEAD'
 alias gc-m='git commit -m'
 alias tree='tree -a -I "\.DS_Store|\.git|node_modules|vendor\/bundle" -N'
 
- >>> CLI tools >>>
-eval $(thefuck --alias)
-eval "$(starship init zsh)"
+# >>> CLI tools >>>
 eval "$(zoxide init zsh)"
 # <<< CLI tools <<<
 export PATH="/usr/local/opt/llvm/bin:$PATH"
