@@ -10,3 +10,12 @@ alias gc-m='git commit -m'
 alias tree='tree -a -I "\.DS_Store|\.git|node_modules|vendor\/bundle" -N'
 
 
+function gadd() {
+    local selected
+    selected=$(git status -s | fzf | awk '{print $2}')
+    if [[ -n "$selected" ]]; then
+        git add $selected
+    fi
+}
+
+
