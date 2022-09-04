@@ -1,12 +1,12 @@
 vim.cmd("autocmd!")
 
-
-vim.g.colors_name = 'pabro'
+-- vim.g.colors_name = 'pabro'
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
+vim.wo.relativenumber = true
 vim.wo.number = true
 vim.g.mapleader = " "
 vim.opt.title = true
