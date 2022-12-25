@@ -1,3 +1,5 @@
+
+alias dirsize="du -h -d 1 | sort -h"
 alias checkaliasload="echo ok"
 alias startyabai="brew services start skhd;brew services start yabai"
 alias stopyabai="brew services stop skhd;brew services stop yabai"
