@@ -1,9 +1,15 @@
 # focus window
+## ******************************************
+# Focus Window
+# ******************************************
+alt - h: yabai -m window --focus west || yabai -m display --focus west
+alt - l: yabai -m window --focus east || yabai -m display --focus east
+alt - j: yabai -m window --focus south || yabai -m display --focus south
+alt - k: yabai -m window --focus north || yabai -m display --focus north
+alt - n: yabai -m window --focus next || yabai -m display --focus next
+alt - p: yabai -m window --focus prev || yabai -m display --focus prev
+
 alt - x : yabai -m window --focus recent
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
 alt - z : yabai -m window --focus stack.prev
 alt - c : yabai -m window --focus stack.next
 
@@ -65,6 +71,17 @@ alt - t : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
 ctrl + alt - z : yabai -m space --layout bsp
 ctrl + alt - x : yabai -m space --layout float
 
-alt + shift - t : [ "$(yabai -m query --spaces --space | jq -r '.type')" = bsp ] \
-    && yabai -m space --layout stack \
+# stackline
+# Stack window
+alt + ctrl - s : yabai -m window --stack next
+
+# Add the active window  to the window or stack to the {direction}
+# Note that this only works when the active window does *not* already belong to a stack
+alt + ctrl - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
+
+alt + shift - t:[ "$(yabai -m query --spaces --space | jq -r '.type')" = bsp ] \
+    && yabai -m space --layout float \
     || yabai -m space --layout bsp

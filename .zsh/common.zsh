@@ -41,4 +41,3 @@ fi
 
 # <<< exa <<<
 
-export PATH="$HOME/.poetry/bin:$PATH"
