@@ -1,7 +1,7 @@
 require('base')
-require('highlights')
+-- require('highlights')
 require('maps')
-require('plugins')
+-- require('plugins')
 
 
 local has = function(x)
